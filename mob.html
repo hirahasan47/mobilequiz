@@ -187,6 +187,83 @@
         .dark .notification-badge {
             background: #FF453A;
         }
+        /* Continue Learning Section */
+        .course-slider {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            padding: 4px 0;
+            position: relative;
+            width: 100%;
+        }
+        .course-slider::-webkit-scrollbar {
+            display: none;
+        }
+        .course-wrapper {
+            width: 90%;
+            padding-right: 16px;
+            flex: 0 0 auto;
+        }
+        .course-card {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            padding: 16px;
+            position: relative;
+        }
+        .dark .course-card {
+            background: rgba(30, 30, 30, 0.8);
+        }
+        .progress-line {
+            height: 2px;
+            background: currentColor;
+            opacity: 0.1;
+            border-radius: 1px;
+            margin: 8px 0;
+        }
+        .progress-line .fill {
+            height: 100%;
+            background: currentColor;
+            opacity: 1;
+            border-radius: 1px;
+            transition: width 0.3s ease;
+        }
+        .course-title {
+            font-size: 15px;
+            line-height: 1.3;
+            font-weight: 500;
+            margin: 8px 0 4px;
+            color: #1D1D1F;
+        }
+        .dark .course-title {
+            color: #FFFFFF;
+        }
+        .course-subtitle {
+            font-size: 13px;
+            color: #86868B;
+            margin-bottom: 12px;
+        }
+        .dark .course-subtitle {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        .continue-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .continue-btn svg {
+            width: 14px;
+            height: 14px;
+            margin-left: 4px;
+            transition: transform 0.2s;
+        }
+        .continue-btn:hover svg {
+            transform: translateX(2px);
+        }
     </style>
     <script>
         const themeToggle = {
@@ -282,6 +359,77 @@
 
     <!-- Main Content -->
     <main class="px-5 py-4 pb-24">
+        <!-- Continue Learning Section -->
+        <div class="mb-6">
+            <h2 class="text-lg font-semibold primary-text mb-4">Continue learning</h2>
+            <div class="course-slider overflow-x-auto -mx-5">
+                <div class="flex px-5">
+                    <!-- Course Card 1 -->
+                    <div class="course-wrapper">
+                        <div class="course-card text-[#6e38ff] dark:text-[#8b5cf6]">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[13px] font-semibold">SSC'25</span>
+                                <span class="text-[13px] font-medium">35%</span>
+                            </div>
+                            <div class="progress-line">
+                                <div class="fill" style="width: 35%"></div>
+                            </div>
+                            <h3 class="course-title">বাংলাদেশের ইতিহাস ও বিশ্বসভ্যতা</h3>
+                            <p class="course-subtitle">History & World Civilization</p>
+                            <button class="continue-btn bg-[#6e38ff]/10 hover:bg-[#6e38ff]/20 dark:bg-[#8b5cf6]/20 dark:hover:bg-[#8b5cf6]/30">
+                                Continue
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Course Card 2 -->
+                    <div class="course-wrapper">
+                        <div class="course-card text-[#11b364]">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[13px] font-semibold">HSC'24</span>
+                                <span class="text-[13px] font-medium">62%</span>
+                            </div>
+                            <div class="progress-line">
+                                <div class="fill" style="width: 62%"></div>
+                            </div>
+                            <h3 class="course-title">পদার্থবিজ্ঞান অধ্যায় ৫</h3>
+                            <p class="course-subtitle">Physics Chapter 5</p>
+                            <button class="continue-btn bg-[#11b364]/10 hover:bg-[#11b364]/20">
+                                Continue
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Course Card 3 -->
+                    <div class="course-wrapper">
+                        <div class="course-card text-[#f79009]">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[13px] font-semibold">SSC'25</span>
+                                <span class="text-[13px] font-medium">20%</span>
+                            </div>
+                            <div class="progress-line">
+                                <div class="fill" style="width: 20%"></div>
+                            </div>
+                            <h3 class="course-title">গণিত: বীজগণিত</h3>
+                            <p class="course-subtitle">Mathematics</p>
+                            <button class="continue-btn bg-[#f79009]/10 hover:bg-[#f79009]/20">
+                                Continue
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Dashboard Section -->
         <div class="grid grid-cols-2 gap-3">
             <!-- Total Courses Card -->
@@ -447,14 +595,14 @@
                 </a>
 
                 <!-- Empty Space or Future Feature -->
-                <div class="w-[110px]">
-                    <div class="card w-[110px] h-[110px] p-3 rounded-2xl flex flex-col items-center justify-center text-center bg-black/5 dark:bg-white/5">
-                        <div class="w-12 h-12 bg-black/10 dark:bg-white/10 rounded-xl flex items-center justify-center mb-2">
-                            <svg class="w-6 h-6 text-black/30 dark:text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="w-[110px] hidden dark:block">
+                    <div class="card w-[110px] h-[110px] p-3 rounded-2xl flex flex-col items-center justify-center text-center bg-[#F5F5F7] dark:bg-white/5">
+                        <div class="w-12 h-12 bg-[#E6E6E6] dark:bg-white/10 rounded-xl flex items-center justify-center mb-2">
+                            <svg class="w-6 h-6 text-[#86868B] dark:text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v16m8-8H4"/>
                             </svg>
                         </div>
-                        <h3 class="text-[15px] font-medium text-black/40 dark:text-white/40 leading-tight">Coming Soon</h3>
+                        <h3 class="text-[15px] font-medium text-[#86868B] dark:text-white/40 leading-tight">Coming Soon</h3>
                     </div>
                 </div>
             </div>
