@@ -1,0 +1,97 @@
+:root {
+    --primary: #6e38ff;
+    --success: #11b364;
+    --warning: #f79009;
+    --error: #f04438;
+    --info: #1363ff;
+}
+
+body {
+    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background-color: #F5F5F7;
+    color: #1D1D1F;
+}
+
+.dark body {
+    background-color: #1C1C1E;
+    color: #FFFFFF;
+}
+
+.safe-top {
+    padding-top: env(safe-area-inset-top);
+}
+
+.safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Add all your existing styles here */
+
+/* Course Categories Section */
+.category-slider {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    width: 100%;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 0;
+}
+
+.category-wrapper {
+    min-width: unset;
+    max-width: unset;
+    margin-right: 0;
+    width: 100%;
+}
+
+.category-card {
+    height: 100%;
+    white-space: normal;
+    padding: 12px;
+    transition: all 0.2s ease-in-out;
+    transform: translateY(0);
+}
+
+.category-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Continue Learning Section */
+.course-slider {
+    position: relative;
+    margin: 0 -16px;
+    padding: 0 16px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    width: calc(100% + 32px);
+}
+
+.course-wrapper {
+    min-width: calc(100vw - 64px);
+    max-width: 320px;
+    margin-right: 16px;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-top: 0.5px solid rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    padding-bottom: env(safe-area-inset-bottom, 16px);
+} 
